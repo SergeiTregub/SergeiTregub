@@ -8,4 +8,4 @@ You can click the Preview link to take a look at your changes.
 --->
 -- Enterprise Cloud GitHub Account --
 
-30 DAYS LEFT UNTIL ACCOUNT WONT BE ABLE TO USE ENTERPRISE CLOUD GITHUB!!!
+ENTERPRISE CLOUD GITHUB ACCOUNT ENDED!
