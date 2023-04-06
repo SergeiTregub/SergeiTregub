@@ -1,0 +1,48 @@
+# WARNING: NOT CODED BY ME! COPIED FROM EXAMPLES. (SONIC PI)
+
+# First code just prints the text.
+# Example: print("hello world!")
+# Everyone should use Raspberry Pi 4B with Raspberry Pi Keyboard and Mouse, to print hello world.
+# When it's printed, that means we are ready to go.
+
+print("Yay some happy piano sounds!")
+
+# This command is not coded by me. This is coded by Sam Aaron.
+[1, 3, 6, 4].each do |d|
+  (range -3, 3).each do |i|
+    play_chord (chord_degree d, :c, :major, 3, invert: i)
+    sleep 0.25
+  end
+end
+
+# Now, [Wizard] Time Machine is Coded by Sam Aaron.
+
+# First command also prints text, but now, this is another text.
+print("WTF?")
+
+# Starts [Wizard] Time Machine
+
+use_debug false
+
+live_loop :time do
+  synth :tb303, release: 8, note: :e1, cutoff: (range 90, 60, -10).tick
+  sleep 8
+end
+
+live_loop :machine do
+  sample :loop_garzul, rate: (knit 1, 3, -1, 1).tick
+  sleep 8
+end
+
+live_loop :vortex, auto_cue: false do
+  use_synth [:pulse, :beep].choose
+  sleep 0.125 / 2
+  play scale(:e1, :minor_pentatonic).tick, attack: 0.125, release: 0, amp: 2, cutoff: (ring 70, 90, 100, 130).look
+  sleep 0.125 / 2
+end
+
+live_loop :moon_bass, auto_cue: false do
+  sample :bd_haus, amp: 1.5
+  sleep 0.5
+end
+
